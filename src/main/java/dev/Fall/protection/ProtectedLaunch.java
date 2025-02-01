@@ -19,7 +19,6 @@ import dev.Fall.module.impl.movement.*;
 import dev.Fall.module.impl.player.Timer;
 import dev.Fall.module.impl.player.*;
 import dev.Fall.module.impl.render.*;
-import dev.Fall.network.user.UserManager;
 import dev.Fall.scripting.api.ScriptManager;
 import dev.Fall.ui.altmanager.GuiAltManager;
 import dev.Fall.ui.altmanager.helpers.KingGenApi;
@@ -66,18 +65,13 @@ public class ProtectedLaunch {
         modules.put(Spammer.class, new Spammer());
         modules.put(AutoHypixel.class, new AutoHypixel());
         modules.put(MCF.class, new MCF());
-        modules.put(IRC.class, new IRC());
-        modules.put(AutoL.class, new AutoL());
-        modules.put(KillHints.class, new KillHints());
         modules.put(PacketFix.class, new PacketFix());
         modules.put(GermMod.class, new GermMod());
         modules.put(Antibot.class, new Antibot());
-        modules.put(AutoReport.class, new AutoReport());
 
         // Movement
         modules.put(Sprint.class, new Sprint());
         modules.put(Scaffold.class, new Scaffold());
-       // modules.put(Scaffold2.class, new Scaffold2());
         modules.put(Speed.class, new Speed());
         modules.put(Flight.class, new Flight());
         modules.put(Step.class, new Step());
@@ -151,7 +145,6 @@ public class ProtectedLaunch {
 
         Theme.init();
 
-        Fall.INSTANCE.setUserManager(new UserManager());
 
         Fall.INSTANCE.setPingerUtils(new PingerUtils());
 

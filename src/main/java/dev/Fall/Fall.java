@@ -8,7 +8,6 @@ import dev.Fall.intent.api.account.IntentAccount;
 import dev.Fall.intent.cloud.CloudDataManager;
 import dev.Fall.module.Module;
 import dev.Fall.module.ModuleCollection;
-import dev.Fall.network.user.UserManager;
 import dev.Fall.scripting.api.ScriptManager;
 import dev.Fall.ui.altmanager.GuiAltManager;
 import dev.Fall.ui.altmanager.helpers.KingGenApi;
@@ -50,7 +49,6 @@ public class Fall implements Utils {
     private ModuleCollection moduleCollection;
     private ScriptManager scriptManager;
     private IntentAccount intentAccount;
-    public UserManager userManager;
     public Logger logger;
     private ConfigManager configManager;
     private GuiAltManager altManager;
