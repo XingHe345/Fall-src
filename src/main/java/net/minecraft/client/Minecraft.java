@@ -17,13 +17,10 @@ import dev.Fall.event.impl.player.BlockEvent;
 import dev.Fall.event.impl.player.BlockPlaceableEvent;
 import dev.Fall.event.impl.player.ClickEvent;
 import dev.Fall.event.impl.player.ClickEventRight;
-import dev.Fall.module.impl.render.ClickGUIMod;
 import dev.Fall.protection.ProtectedLaunch;
 import dev.Fall.ui.SplashScreen;
-import dev.Fall.ui.guilogin.LoginMenu;
 import dev.Fall.ui.mainmenu.CustomMainMenu;
 import dev.Fall.utils.font.FontUtil;
-import dev.Fall.utils.misc.SoundUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.audio.MusicTicker;
@@ -532,9 +529,9 @@ public class Minecraft implements IThreadListener, IPlayerUsage {
 
 
         if (this.serverName != null) {
-            this.displayGuiScreen(new GuiConnecting(new LoginMenu(), this, this.serverName, this.serverPort));
+            this.displayGuiScreen(new GuiConnecting(new CustomMainMenu(), this, this.serverName, this.serverPort));
         } else {
-            this.displayGuiScreen(new LoginMenu());
+            this.displayGuiScreen(new CustomMainMenu());
         }
 
         this.renderEngine.deleteTexture(this.mojangLogo);
